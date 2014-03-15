@@ -24,12 +24,12 @@ namespace BSCMS.WebUI
 
         public string UserName
         {
-            get { throw new NotImplementedException(); }
+            get { return userName.Text; }
         }
 
         public string UserPassword
         {
-            get { throw new NotImplementedException(); }
+            get { return userPassword.Text; }
         }
     }
 }
