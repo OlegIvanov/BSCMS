@@ -17,6 +17,13 @@ namespace BSCMS.WebUI.Views
         protected void PageInit(object sender, EventArgs e)
         {
             _presenter = new SignInPresenter(this, ObjectFactory.GetInstance<AuthenticationService>());
+
+            this.signIn.Click += new EventHandler(signIn_Click);
+        }
+
+        protected void signIn_Click(object sender, EventArgs e)
+        {
+            _presenter.SignIn();
         }
 
         protected void Page_Load(object sender, EventArgs e)

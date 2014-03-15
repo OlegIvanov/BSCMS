@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using BSCMS.Service.Messages;
-using BSCMC.Model;
+using BSCMS.Model;
 
 namespace BSCMS.Service
 {
@@ -18,6 +18,14 @@ namespace BSCMS.Service
 
         public AuthenticateResponse SignIn(AuthenticateRequest authenticateRequest)
         {
+            UserAuthenticationQuery userAuthenticationQuery = new UserAuthenticationQuery 
+            { 
+                Username = authenticateRequest.Username,
+                PasswordHash = HashCalculator.HashPassword(authenticateRequest.Password)
+            };
+
+            User user = _userRepository.FindBy(userAuthenticationQuery);
+
             throw new NotImplementedException();
         }
     }

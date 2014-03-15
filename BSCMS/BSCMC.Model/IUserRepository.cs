@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace BSCMC.Model
+namespace BSCMS.Model
 {
     public interface IUserRepository
     {

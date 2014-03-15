@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using StructureMap;
-using BSCMC.Model;
+using BSCMS.Model;
 using BSCMS.Repository;
 
 namespace BSCMS.WebUI
