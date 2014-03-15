@@ -12,9 +12,9 @@ GO
 USE BookStore
 
 GO
-CREATE TABLE Users
+CREATE TABLE _User
 (
-	UserId					INT PRIMARY KEY,
-	Name					NVARCHAR(100) NOT NULL,
+	Id						INT PRIMARY KEY,
+	Username				NVARCHAR(100) NOT NULL,
 	PasswordHash			NVARCHAR(100) NOT NULL
 )

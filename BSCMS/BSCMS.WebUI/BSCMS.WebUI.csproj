@@ -90,9 +90,17 @@
     <Content Include="Admin.Master" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BSCMC.Model\BSCMC.Model.csproj">
+      <Project>{A41051F7-7A2A-4EBB-B4EB-B575657789E4}</Project>
+      <Name>BSCMC.Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BSCMS.Presentation\BSCMS.Presentation.csproj">
       <Project>{FC9AAE64-B2C7-4655-8C4A-DF888E4A38DA}</Project>
       <Name>BSCMS.Presentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BSCMS.Repository\BSCMS.Repository.csproj">
+      <Project>{ABAD34C3-F723-48D1-A3FF-B9DEC64C4D67}</Project>
+      <Name>BSCMS.Repository</Name>
     </ProjectReference>
     <ProjectReference Include="..\BSCMS.Service\BSCMS.Service.csproj">
       <Project>{1A6A71BE-AB3E-41F8-AE22-C1E422F280B3}</Project>
