@@ -8,7 +8,7 @@ using BSCMS.Presentation;
 using BSCMS.Service;
 using StructureMap;
 
-namespace BSCMS.WebUI
+namespace BSCMS.WebUI.Views
 {
     public partial class SignIn : System.Web.UI.Page, ISignInView
     {

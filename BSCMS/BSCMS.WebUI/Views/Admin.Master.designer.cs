@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BSCMS.WebUI {
+namespace BSCMS.WebUI.Views {
     
     
     public partial class Admin {
