@@ -7,7 +7,7 @@ namespace BSCMS.Presentation
 {
     public interface ISignInView
     {
-        string UserName { get; }
-        string UserPassword { get; }
+        string Username { get; }
+        string Password { get; }
     }
 }

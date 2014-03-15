@@ -23,12 +23,12 @@ namespace BSCMS.WebUI
         {
         }
 
-        public string UserName
+        public string Username
         {
             get { return userName.Text; }
         }
 
-        public string UserPassword
+        public string Password
         {
             get { return userPassword.Text; }
         }

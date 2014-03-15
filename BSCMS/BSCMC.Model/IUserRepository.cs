@@ -7,5 +7,6 @@ namespace BSCMC.Model
 {
     public interface IUserRepository
     {
+        User FindBy(UserAuthenticationQuery userAuthenticationQuery);
     }
 }

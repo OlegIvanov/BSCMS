@@ -8,5 +8,9 @@ namespace BSCMS.Repository
 {
     public class UserRepository : IUserRepository
     {
+        public User FindBy(UserAuthenticationQuery userAuthenticationQuery)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

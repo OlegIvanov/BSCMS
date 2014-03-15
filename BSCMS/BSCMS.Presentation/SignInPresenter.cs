@@ -23,9 +23,10 @@ namespace BSCMS.Presentation
         {
             AuthenticateRequest authenticateRequest = new AuthenticateRequest
             {
-                UserName = _signInView.UserName,
-                UserPassword = _signInView.UserPassword
+                Username = _signInView.Username,
+                Password = _signInView.Password
             };
+            AuthenticateResponse authenticateResponse = _authenticationService.SignIn(authenticateRequest);
         }
     }
 }

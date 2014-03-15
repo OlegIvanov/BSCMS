@@ -7,7 +7,7 @@ namespace BSCMC.Model
 {
     public class UserAuthenticationQuery
     {
-        public string UserName { get; set; }
+        public string Username { get; set; }
         public string PasswordHash { get; set; }
     }
 }

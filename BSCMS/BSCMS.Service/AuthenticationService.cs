@@ -9,11 +9,11 @@ namespace BSCMS.Service
 {
     public class AuthenticationService
     {
-        private UserService _userService;
+        private IUserRepository _userRepository;
 
-        public AuthenticationService(UserService userService)
+        public AuthenticationService(IUserRepository userRepository)
         {
-            _userService = userService;
+            _userRepository = userRepository;
         }
 
         public AuthenticateResponse SignIn(AuthenticateRequest authenticateRequest)
