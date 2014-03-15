@@ -51,6 +51,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CreateDatabase.sql" />
     <Content Include="SignIn.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

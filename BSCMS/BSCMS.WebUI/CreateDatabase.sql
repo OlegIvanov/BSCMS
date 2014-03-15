@@ -1,0 +1,20 @@
+﻿GO
+USE master
+
+GO
+IF DB_ID('BookStore') IS NOT NULL
+	DROP DATABASE BookStore
+
+GO
+CREATE DATABASE BookStore
+
+GO
+USE BookStore
+
+GO
+CREATE TABLE Users
+(
+	UserId					INT PRIMARY KEY,
+	Name					NVARCHAR(100) NOT NULL,
+	PasswordHash			NVARCHAR(100) NOT NULL
+)
