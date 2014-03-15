@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using BSCMS.Presentation;
+using BSCMS.Service;
+using StructureMap;
 
 namespace BSCMS.WebUI
 {
@@ -14,12 +16,11 @@ namespace BSCMS.WebUI
 
         protected void PageInit(object sender, EventArgs e)
         {
-            _presenter = new SignInPresenter(this);
+            _presenter = new SignInPresenter(this, ObjectFactory.GetInstance<AuthenticationService>());
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
         public string UserName

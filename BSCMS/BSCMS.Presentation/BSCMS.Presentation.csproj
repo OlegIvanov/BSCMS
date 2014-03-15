@@ -44,6 +44,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SignInPresenter.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BSCMS.Service\BSCMS.Service.csproj">
+      <Project>{1A6A71BE-AB3E-41F8-AE22-C1E422F280B3}</Project>
+      <Name>BSCMS.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

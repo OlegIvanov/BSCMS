@@ -45,6 +45,12 @@
     <Compile Include="Messages\AuthenticateResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BSCMC.Model\BSCMC.Model.csproj">
+      <Project>{A41051F7-7A2A-4EBB-B4EB-B575657789E4}</Project>
+      <Name>BSCMC.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

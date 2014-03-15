@@ -21,6 +21,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSCMS.Service", "BSCMS.Serv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSCMS.Presentation", "BSCMS.Presentation\BSCMS.Presentation.csproj", "{FC9AAE64-B2C7-4655-8C4A-DF888E4A38DA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{C2EE5B8C-9A1D-483B-A2B2-675978847619}"
+	ProjectSection(SolutionItems) = preProject
+		Lib\StructureMap.dll = Lib\StructureMap.dll
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
