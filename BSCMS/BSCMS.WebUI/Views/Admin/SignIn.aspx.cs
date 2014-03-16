@@ -5,7 +5,7 @@ using BSCMS.Presentation.Navigation;
 using BSCMS.Service;
 using StructureMap;
 
-namespace BSCMS.WebUI.Views
+namespace BSCMS.WebUI.Views.Admin
 {
     public partial class SignIn : System.Web.UI.Page, ISignInView
     {
