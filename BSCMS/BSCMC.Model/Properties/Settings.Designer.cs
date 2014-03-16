@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BSCMS.Model.Properties {
+namespace BSCMC.Model.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -20,18 +20,6 @@ namespace BSCMS.Model.Properties {
         public static Settings Default {
             get {
                 return defaultInstance;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("PasswordSalt")]
-        public string PasswordSalt {
-            get {
-                return ((string)(this["PasswordSalt"]));
-            }
-            set {
-                this["PasswordSalt"] = value;
             }
         }
     }

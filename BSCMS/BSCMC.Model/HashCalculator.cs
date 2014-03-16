@@ -11,7 +11,7 @@ namespace BSCMS.Model
         public static string HashPassword(string password)
         {
             // Take salt for password
-            string passwordSalt = Model.Properties.Settings.Default.PasswordSalt;
+            string passwordSalt = "";
 
             // Add salt to password
             password += passwordSalt;
