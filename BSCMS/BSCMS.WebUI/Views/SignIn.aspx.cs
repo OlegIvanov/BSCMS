@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+using BSCMS.Infrastructure.Authentication;
 using BSCMS.Presentation;
 using BSCMS.Service;
 using StructureMap;
@@ -16,7 +12,7 @@ namespace BSCMS.WebUI.Views
 
         protected void Page_Init(object sender, EventArgs e)
         {
-            _presenter = new SignInPresenter(this, ObjectFactory.GetInstance<AuthenticationService>());
+            _presenter = new SignInPresenter(this, ObjectFactory.GetInstance<AuthenticationService>(), new AspFormsAuthentication());
 
             this.signIn.Click += new EventHandler(signIn_Click);
         }

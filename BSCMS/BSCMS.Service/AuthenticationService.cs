@@ -26,7 +26,17 @@ namespace BSCMS.Service
 
             User user = _userRepository.FindBy(userAuthenticationQuery);
 
-            return new AuthenticateResponse { };
+            AuthenticateResponse authenticateResponse = new AuthenticateResponse();
+            authenticateResponse.IsAuthenticated = false;
+
+            if (user != null)
+            {
+                authenticateResponse.AuthenticationToken = user.Id.ToString();
+                authenticateResponse.Username = user.Username;
+                authenticateResponse.IsAuthenticated = true;
+            }
+
+            return authenticateResponse;
         }
     }
 }

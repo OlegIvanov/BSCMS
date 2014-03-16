@@ -90,6 +90,10 @@
     <Content Include="Views\Admin.Master" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BSCMS.Infrastructure\BSCMS.Infrastructure.csproj">
+      <Project>{090DE6B3-638F-410D-93D1-580ED5804201}</Project>
+      <Name>BSCMS.Infrastructure</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BSCMS.Model\BSCMS.Model.csproj">
       <Project>{A41051F7-7A2A-4EBB-B4EB-B575657789E4}</Project>
       <Name>BSCMS.Model</Name>
