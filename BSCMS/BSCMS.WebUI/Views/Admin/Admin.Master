@@ -11,6 +11,16 @@
 <body>
     <form id="form1" runat="server">
     <div>
+        <% if (Request.IsAuthenticated)
+           { %>
+                <asp:LinkButton runat="server" Text="Sign Out"></asp:LinkButton>
+        <% }
+           else
+           { %>
+                <a href="SignIn.aspx">Sign In</a>
+        <% } %>
+    </div>
+    <div>
         <asp:ContentPlaceHolder ID="main" runat="server">
         </asp:ContentPlaceHolder>
     </div>
