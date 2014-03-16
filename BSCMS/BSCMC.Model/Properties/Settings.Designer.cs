@@ -23,15 +23,12 @@ namespace BSCMS.Model.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("PasswordSalt")]
         public string PasswordSalt {
             get {
                 return ((string)(this["PasswordSalt"]));
-            }
-            set {
-                this["PasswordSalt"] = value;
             }
         }
     }

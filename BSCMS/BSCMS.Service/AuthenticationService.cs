@@ -26,7 +26,7 @@ namespace BSCMS.Service
 
             User user = _userRepository.FindBy(userAuthenticationQuery);
 
-            throw new NotImplementedException();
+            return new AuthenticateResponse { };
         }
     }
 }

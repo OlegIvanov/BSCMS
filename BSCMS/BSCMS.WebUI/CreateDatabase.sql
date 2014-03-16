@@ -20,6 +20,9 @@ CREATE TABLE Users
 )
 
 GO
+INSERT INTO Users VALUES (1, 'oleg', 'ac29937c97d6154f8f31c85f9abf5c790557cf55')
+
+GO
 CREATE PROCEDURE GetUserByUserAuthenticationQuery
 (
 	@Username				NVARCHAR(100),

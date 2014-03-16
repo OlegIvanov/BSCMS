@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using StructureMap;
+using System.Web.Configuration;
 using BSCMS.Model;
 using BSCMS.Repository;
+using StructureMap;
 
 namespace BSCMS.WebUI
 {
@@ -14,7 +15,7 @@ namespace BSCMS.WebUI
         {
             ObjectFactory.Initialize(x => 
             {
-                x.For<IUserRepository>().Use<UserRepository>();
+                x.For<IUserRepository>().Use<UserRepository>().Ctor<string>().Is(WebConfigurationManager.ConnectionStrings["BookStore"].ConnectionString);
             });
         }
     }
