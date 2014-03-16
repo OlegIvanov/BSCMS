@@ -16,7 +16,7 @@
                 Password:
             </td>
             <td>
-                <asp:TextBox ID="userPassword" runat="server"></asp:TextBox>
+                <asp:TextBox ID="userPassword" runat="server" TextMode="Password"></asp:TextBox>
             </td>
         </tr>
         <tr>
