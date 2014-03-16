@@ -17,7 +17,7 @@
         <% }
            else
            { %>
-                <a href="SignIn.aspx">Sign In</a>
+                <asp:LinkButton runat="server" PostBackUrl="~/Views/Admin/SignIn.aspx" Text="Sign In"></asp:LinkButton>
         <% } %>
     </div>
     <div>
