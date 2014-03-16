@@ -1,6 +1,7 @@
 ﻿using System;
 using BSCMS.Infrastructure.Authentication;
 using BSCMS.Presentation;
+using BSCMS.Presentation.Navigation;
 using BSCMS.Service;
 using StructureMap;
 
@@ -12,7 +13,7 @@ namespace BSCMS.WebUI.Views
 
         protected void Page_Init(object sender, EventArgs e)
         {
-            _presenter = new SignInPresenter(this, ObjectFactory.GetInstance<AuthenticationService>(), new AspFormsAuthentication());
+            _presenter = new SignInPresenter(this, ObjectFactory.GetInstance<AuthenticationService>(), new AspFormsAuthentication(), new PageNavigator());
 
             this.signIn.Click += new EventHandler(signIn_Click);
         }

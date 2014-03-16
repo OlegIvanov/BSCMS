@@ -21,7 +21,7 @@
         </tr>
         <tr>
             <td colspan="2">
-                <asp:Button ID="signIn" runat="server" Text="Sign In" />
+                <asp:LinkButton ID="signIn" runat="server" Text="Sign In"></asp:LinkButton>
             </td>
         </tr>
     </table>

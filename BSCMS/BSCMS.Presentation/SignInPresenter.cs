@@ -1,4 +1,5 @@
 ﻿using BSCMS.Infrastructure.Authentication;
+using BSCMS.Presentation.Navigation;
 using BSCMS.Service;
 using BSCMS.Service.Messages;
 
@@ -9,12 +10,14 @@ namespace BSCMS.Presentation
         private ISignInView _signInView;
         private AuthenticationService _authenticationService;
         private IFormsAuthentication _formsAuthentication;
+        private IPageNavigator _pageNavigator;
 
-        public SignInPresenter(ISignInView signInView, AuthenticationService authenticationService, IFormsAuthentication formsAuthentication)
+        public SignInPresenter(ISignInView signInView, AuthenticationService authenticationService, IFormsAuthentication formsAuthentication, IPageNavigator pageNavigator)
         {
             _signInView = signInView;
             _authenticationService = authenticationService;
             _formsAuthentication = formsAuthentication;
+            _pageNavigator = pageNavigator;
         }
 
         public void SignIn()
@@ -30,6 +33,7 @@ namespace BSCMS.Presentation
             if (authenticateResponse.IsAuthenticated) 
             {
                 _formsAuthentication.SetAuthenticationToken(authenticateResponse.AuthenticationToken);
+                _pageNavigator.NavigateTo(PageDirectory.AuthenticationReturnUrl);
             }
         }
     }
