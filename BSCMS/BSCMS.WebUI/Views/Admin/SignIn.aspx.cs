@@ -25,6 +25,7 @@ namespace BSCMS.WebUI.Views.Admin
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
         }
 
         public string Username
