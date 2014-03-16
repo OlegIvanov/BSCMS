@@ -17,6 +17,8 @@ namespace BSCMS.Presentation.Navigation
                         string returnUrl = HttpContext.Current.Request["ReturnUrl"];
                         if (!String.IsNullOrEmpty(returnUrl))
                             HttpContext.Current.Response.Redirect(returnUrl);
+                        else
+                            HttpContext.Current.Response.Redirect("~/Views/Admin/Index.aspx");
                         break;
                     }
             }
