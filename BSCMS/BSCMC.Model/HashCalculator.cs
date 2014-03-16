@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Security.Cryptography;
+using BSCMS.Model.Properties;
 
 namespace BSCMS.Model
 {
@@ -11,7 +12,7 @@ namespace BSCMS.Model
         public static string HashPassword(string password)
         {
             // Take salt for password
-            string passwordSalt = "";
+            string passwordSalt = Settings.Default.PasswordSalt;
 
             // Add salt to password
             password += passwordSalt;
