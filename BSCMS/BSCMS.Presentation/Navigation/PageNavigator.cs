@@ -18,7 +18,12 @@ namespace BSCMS.Presentation.Navigation
                         if (!String.IsNullOrEmpty(returnUrl))
                             HttpContext.Current.Response.Redirect(returnUrl);
                         else
-                            HttpContext.Current.Response.Redirect("~/Views/Admin/Index.aspx");
+                            NavigateTo(PageDirectory.AdminHome);
+                        break;
+                    }
+                case PageDirectory.AdminHome:
+                    {
+                        HttpContext.Current.Response.Redirect("~/Views/Admin/Index.aspx");
                         break;
                     }
             }

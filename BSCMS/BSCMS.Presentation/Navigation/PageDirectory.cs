@@ -1,4 +1,5 @@
 ﻿public enum PageDirectory
 { 
-    AuthenticationReturnUrl
+    AuthenticationReturnUrl,
+    AdminHome
 }

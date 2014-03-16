@@ -13,7 +13,7 @@
     <div>
         <% if (Request.IsAuthenticated)
            { %>
-                <asp:LinkButton runat="server" Text="Sign Out"></asp:LinkButton>
+                <asp:LinkButton ID="signOut" runat="server" Text="Sign Out"></asp:LinkButton>
         <% }
            else
            { %>
