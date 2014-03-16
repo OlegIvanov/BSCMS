@@ -90,7 +90,7 @@
     <Content Include="Views\Admin.Master" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BSCMC.Model\BSCMS.Model.csproj">
+    <ProjectReference Include="..\BSCMS.Model\BSCMS.Model.csproj">
       <Project>{A41051F7-7A2A-4EBB-B4EB-B575657789E4}</Project>
       <Name>BSCMS.Model</Name>
     </ProjectReference>
