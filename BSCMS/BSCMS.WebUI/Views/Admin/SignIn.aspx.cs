@@ -37,5 +37,14 @@ namespace BSCMS.WebUI.Views.Admin
         {
             get { return userPassword.Text; }
         }
+
+        public string AuthenticationError
+        {
+            set 
+            {
+                this.authenticationError.Text = value;
+                this.authenticationError.Visible = true;
+            }
+        }
     }
 }

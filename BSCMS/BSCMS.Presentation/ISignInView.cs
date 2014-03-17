@@ -9,5 +9,6 @@ namespace BSCMS.Presentation
     {
         string Username { get; }
         string Password { get; }
+        string AuthenticationError { set; }
     }
 }

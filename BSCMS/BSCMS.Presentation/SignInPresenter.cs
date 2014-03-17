@@ -30,10 +30,14 @@ namespace BSCMS.Presentation
 
             AuthenticateResponse authenticateResponse = _authenticationService.SignIn(authenticateRequest);
 
-            if (authenticateResponse.IsAuthenticated) 
+            if (authenticateResponse.IsAuthenticated)
             {
                 _formsAuthentication.SetAuthenticationToken(authenticateResponse.AuthenticationToken, authenticateResponse.Username);
                 _pageNavigator.NavigateTo(PageDirectory.AuthenticationReturnUrl);
+            }
+            else
+            {
+                _signInView.AuthenticationError = "Invalid Username or Password";
             }
         }
     }
