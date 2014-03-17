@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
+using BSCMS.Infrastructure.Authentication;
+using System.Threading;
 
 namespace BSCMS.WebUI
 {
@@ -26,7 +28,16 @@ namespace BSCMS.WebUI
 
         protected void Application_AuthenticateRequest(object sender, EventArgs e)
         {
+            if (HttpContext.Current.User != null && HttpContext.Current.User.Identity.IsAuthenticated)
+            {
+                HttpCookie authenticationCookie = HttpContext.Current.Request.Cookies[FormsAuthentication.FormsCookieName];
+                FormsAuthenticationTicket decryptedTicket = FormsAuthentication.Decrypt(authenticationCookie.Value);
 
+                BSPrincipal bsPrincipal = new BSPrincipal(int.Parse(decryptedTicket.Name), decryptedTicket.UserData);
+
+                HttpContext.Current.User = bsPrincipal;
+                Thread.CurrentPrincipal = bsPrincipal;
+            }
         }
 
         protected void Application_Error(object sender, EventArgs e)

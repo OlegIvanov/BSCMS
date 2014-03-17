@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Authentication\AspFormsAuthentication.cs" />
+    <Compile Include="Authentication\BSIdentity.cs" />
+    <Compile Include="Authentication\BSPrincipal.cs" />
     <Compile Include="Authentication\IFormsAuthentication.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

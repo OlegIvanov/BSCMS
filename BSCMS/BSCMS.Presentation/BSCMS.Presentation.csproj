@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdminMasterPresenter.cs" />
+    <Compile Include="IAdminMasterView.cs" />
     <Compile Include="ISignInView.cs" />
     <Compile Include="Navigation\IPageNavigator.cs" />
     <Compile Include="Navigation\PageDirectory.cs" />

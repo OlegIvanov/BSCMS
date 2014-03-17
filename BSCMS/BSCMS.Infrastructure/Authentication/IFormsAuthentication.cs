@@ -2,7 +2,7 @@
 {
     public interface IFormsAuthentication
     {
-        void SetAuthenticationToken(string token);
+        void SetAuthenticationToken(string token, string userName);
         void SignOut();
     }
 }

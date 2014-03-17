@@ -10,13 +10,13 @@ using BSCMS.Presentation.Navigation;
 
 namespace BSCMS.WebUI.Views.Admin
 {
-    public partial class Admin : System.Web.UI.MasterPage
+    public partial class Admin : System.Web.UI.MasterPage, IAdminMasterView
     {
         private AdminMasterPresenter _presenter;
 
         protected void Page_Init(object sender, EventArgs e)
         {
-            _presenter = new AdminMasterPresenter(new AspFormsAuthentication(), new PageNavigator());
+            _presenter = new AdminMasterPresenter(this, new AspFormsAuthentication(), new PageNavigator());
 
             this.signOut.Click += new EventHandler(signOut_Click);
         }
@@ -28,7 +28,12 @@ namespace BSCMS.WebUI.Views.Admin
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            _presenter.Display();
+        }
 
+        public string UserName
+        {
+            set { this.userName.Text = value; }
         }
     }
 }

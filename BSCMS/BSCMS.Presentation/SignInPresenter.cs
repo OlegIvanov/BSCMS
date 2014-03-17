@@ -32,7 +32,7 @@ namespace BSCMS.Presentation
 
             if (authenticateResponse.IsAuthenticated) 
             {
-                _formsAuthentication.SetAuthenticationToken(authenticateResponse.AuthenticationToken);
+                _formsAuthentication.SetAuthenticationToken(authenticateResponse.AuthenticationToken, authenticateResponse.Username);
                 _pageNavigator.NavigateTo(PageDirectory.AuthenticationReturnUrl);
             }
         }

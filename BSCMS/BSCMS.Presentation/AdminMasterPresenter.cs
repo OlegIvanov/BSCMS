@@ -9,11 +9,13 @@ namespace BSCMS.Presentation
 {
     public class AdminMasterPresenter
     {
+        private IAdminMasterView _adminMasterView;
         private IFormsAuthentication _formsAuthentication;
         private IPageNavigator _pageNavigator;
 
-        public AdminMasterPresenter(IFormsAuthentication formsAuthentication, IPageNavigator pageNavigator) 
+        public AdminMasterPresenter(IAdminMasterView adminMasterView, IFormsAuthentication formsAuthentication, IPageNavigator pageNavigator) 
         {
+            _adminMasterView = adminMasterView;
             _formsAuthentication = formsAuthentication;
             _pageNavigator = pageNavigator;
         }
@@ -22,6 +24,12 @@ namespace BSCMS.Presentation
         {
             _formsAuthentication.SignOut();
             _pageNavigator.NavigateTo(PageDirectory.AdminHome);
+        }
+
+        public void Display()
+        {
+            if (BSIdentity.Current != null && BSIdentity.Current.IsAuthenticated)
+                _adminMasterView.UserName = BSIdentity.Current.UserName;
         }
     }
 }
