@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,11 +42,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AuthenticationService.cs" />
+    <Compile Include="BookService.cs" />
+    <Compile Include="Messages\AddBookRequest.cs" />
     <Compile Include="Messages\AuthenticateRequest.cs" />
     <Compile Include="Messages\AuthenticateResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BSCMS.Infrastructure\BSCMS.Infrastructure.csproj">
+      <Project>{090DE6B3-638F-410D-93D1-580ED5804201}</Project>
+      <Name>BSCMS.Infrastructure</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BSCMS.Model\BSCMS.Model.csproj">
       <Project>{A41051F7-7A2A-4EBB-B4EB-B575657789E4}</Project>
       <Name>BSCMS.Model</Name>

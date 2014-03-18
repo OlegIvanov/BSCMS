@@ -31,7 +31,7 @@ namespace BSCMS.WebUI.Views.Admin
             _presenter.Display();
         }
 
-        public string UserName
+        public string Username
         {
             set { this.userName.Text = value; }
         }

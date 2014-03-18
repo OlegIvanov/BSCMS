@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace BSCMS.Presentation
+namespace BSCMS.Model
 {
-    public interface IAdminMasterView
+    public interface IBookRepository
     {
-        string Username { set; }
     }
 }

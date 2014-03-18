@@ -1,7 +1,7 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
 
-namespace BSCMS.Model
+namespace BSCMS.Infrastructure
 {
     public static class HashCalculator
     {

@@ -45,6 +45,8 @@
     <Compile Include="Authentication\BSIdentity.cs" />
     <Compile Include="Authentication\BSPrincipal.cs" />
     <Compile Include="Authentication\IFormsAuthentication.cs" />
+    <Compile Include="BookCoverFileUtility.cs" />
+    <Compile Include="HashCalculator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

@@ -16,6 +16,7 @@ namespace BSCMS.WebUI
             ObjectFactory.Initialize(x => 
             {
                 x.For<IUserRepository>().Use<UserRepository>().Ctor<string>().Is(WebConfigurationManager.ConnectionStrings["BookStore"].ConnectionString);
+                x.For<IBookRepository>().Use<BookRepository>().Ctor<string>().Is(WebConfigurationManager.ConnectionStrings["BookStore"].ConnectionString);
             });
         }
     }

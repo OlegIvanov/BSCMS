@@ -29,9 +29,9 @@ namespace BSCMS.Presentation
         public void Display()
         {
             if (BSIdentity.Current != null && BSIdentity.Current.IsAuthenticated)
-                _adminMasterView.UserName = BSIdentity.Current.UserName;
+                _adminMasterView.Username = BSIdentity.Current.UserName;
             else
-                _adminMasterView.UserName = "Anonymous";
+                _adminMasterView.Username = "Anonymous";
         }
     }
 }
