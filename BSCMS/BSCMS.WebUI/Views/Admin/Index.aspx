@@ -7,19 +7,15 @@
             <asp:LinkButton ID="addBook" runat="server" PostBackUrl="~/Views/Admin/AddBook.aspx" Text="Add book"></asp:LinkButton>
             <h2>Books</h2>
             <asp:Repeater ID="books" runat="server">
-                <HeaderTemplate>
-                    <table>
-                </HeaderTemplate>
                 <ItemTemplate>
-                    <tr>
-                        <td>
-                            <img src="/Uploads/<%# Eval("FileName") %>" alt="" />
-                        </td>
-                    </tr>
+                    <div>
+                        <img src="/Uploads/<%# Eval("FileName") %>" alt="" />
+                        <div>
+                            <asp:LinkButton runat="server" PostBackUrl="#"><%# Eval("Title") %></asp:LinkButton>
+                        </div>
+                        <span style="font-size: large; color:#990000"><%# Eval("Price") %></span>
+                    </div>
                 </ItemTemplate>
-                <FooterTemplate>
-                    </table>
-                </FooterTemplate>
             </asp:Repeater>
     <% } %>
 </asp:Content>

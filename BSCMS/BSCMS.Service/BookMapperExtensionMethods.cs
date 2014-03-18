@@ -29,7 +29,7 @@ namespace BSCMS.Service
             { 
                 Id = book.Id,
                 Title = book.Title,
-                Price = book.Price.ToString(),
+                Price = string.Format("${0:0.00}", book.Price),
                 FileName = book.FileName
             };
         }

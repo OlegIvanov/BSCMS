@@ -24,7 +24,7 @@ CREATE TABLE Books
 (
 	Id						INT PRIMARY KEY IDENTITY(1,1),
 	Title					NVARCHAR(200) NOT NULL,
-	Price					DECIMAL NOT NULL,
+	Price					MONEY NOT NULL,
 	FileName				NVARCHAR(100) NOT NULL
 )
 
@@ -51,7 +51,7 @@ GO
 CREATE PROCEDURE SaveBook
 (
 	@Title					NVARCHAR(200),
-	@Price					DECIMAL,
+	@Price					MONEY,
 	@FileName				NVARCHAR(100)
 )
 AS

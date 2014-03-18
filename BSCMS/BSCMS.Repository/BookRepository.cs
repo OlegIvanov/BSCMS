@@ -25,7 +25,7 @@ namespace BSCMS.Repository
                 command.CommandType = CommandType.StoredProcedure;
 
                 command.Parameters.Add("@Title", SqlDbType.NVarChar, 200).Value = book.Title;
-                command.Parameters.Add("@Price", SqlDbType.Decimal).Value = book.Price;
+                command.Parameters.Add("@Price", SqlDbType.Money).Value = book.Price;
                 command.Parameters.Add("@FileName", SqlDbType.NVarChar, 100).Value = book.FileName;
 
                 connection.Open();
