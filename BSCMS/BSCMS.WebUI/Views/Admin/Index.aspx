@@ -13,7 +13,7 @@
                 <ItemTemplate>
                     <tr>
                         <td>
-                            <img src='/Uploads/<%# Eval("FilePath") %>' alt="" />
+                            <img src="/Uploads/<%# Eval("FileName") %>" alt="" />
                         </td>
                     </tr>
                 </ItemTemplate>
