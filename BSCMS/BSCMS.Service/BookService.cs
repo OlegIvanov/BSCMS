@@ -28,6 +28,8 @@ namespace BSCMS.Service
                 Price = addBookRequest.Price,
                 FileName = fileName
             };
+
+            _bookRepository.SaveBook(book);
         }
     }
 }

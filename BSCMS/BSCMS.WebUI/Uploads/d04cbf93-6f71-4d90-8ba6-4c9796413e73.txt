@@ -1,4 +1,0 @@
-Create asp.net web-site based on the Web-Forms technology from scratch with the following logic:
-1. Web-site should act as simple CMS. Admin user can create any number of contents, which could be seen by users after that.
-2. Necessary to create admin part with possibility to manage unlimited number of contents.
-3. Necessary to create front-end part with possibility to view unlimited number of contents.

@@ -7,5 +7,6 @@ namespace BSCMS.Model
 {
     public interface IBookRepository
     {
+        void SaveBook(Book book);
     }
 }
