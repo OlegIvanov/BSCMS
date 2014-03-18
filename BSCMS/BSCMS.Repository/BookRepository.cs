@@ -33,5 +33,39 @@ namespace BSCMS.Repository
                 command.ExecuteNonQuery();
             }
         }
+
+        public IList<Book> FindAll()
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                SqlCommand command = new SqlCommand("GetAllBooks", connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                connection.Open();
+
+                using (IDataReader reader = command.ExecuteReader())
+                {
+                    return GetBookCollectionFromReader(reader);
+                }
+            }
+        }
+
+        private IList<Book> GetBookCollectionFromReader(IDataReader dataReader)
+        {
+            IList<Book> books = new List<Book>();
+
+            while (dataReader.Read())
+            {
+                books.Add(new Book 
+                { 
+                    Id = (int)dataReader["Id"],
+                    Title = (string)dataReader["Title"],
+                    Price = (decimal)dataReader["Price"],
+                    FileName = (string)dataReader["FileName"]
+                });
+            }
+
+            return books;
+        }
     }
 }

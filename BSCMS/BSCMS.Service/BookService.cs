@@ -31,5 +31,16 @@ namespace BSCMS.Service
 
             _bookRepository.SaveBook(book);
         }
+
+        public BookListResponse GetBookList()
+        {
+            BookListResponse bookListResponse = new BookListResponse();
+
+            IList<Book> books = _bookRepository.FindAll();
+
+            bookListResponse.Books = books.ConvertToBookListViewModel();
+
+            return bookListResponse;
+        }
     }
 }

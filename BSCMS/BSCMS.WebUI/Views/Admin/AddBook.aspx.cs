@@ -41,7 +41,6 @@ namespace BSCMS.WebUI.Views.Admin
             get { return decimal.Parse(this.bookPrice.Text); }
         }
 
-
         public HttpPostedFile Cover
         {
             get { return Request.Files.Get(0); }

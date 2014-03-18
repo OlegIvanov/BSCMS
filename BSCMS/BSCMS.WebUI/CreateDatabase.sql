@@ -68,3 +68,11 @@ VALUES
 	@Price, 
 	@FileName
 )
+
+GO
+CREATE PROCEDURE GetAllBooks
+AS
+SELECT 
+	* 
+FROM 
+	Books

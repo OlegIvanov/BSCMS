@@ -19,7 +19,7 @@ namespace BSCMS.Infrastructure
             
             string filePath = Path.Combine(_uploadDirectory, fileName);
             bookCover.SaveAs(filePath);
-
+            
             return fileName;
         }
     }

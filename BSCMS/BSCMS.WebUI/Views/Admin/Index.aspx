@@ -5,5 +5,21 @@
     <% if (Request.IsAuthenticated)
        { %>
             <asp:LinkButton ID="addBook" runat="server" PostBackUrl="~/Views/Admin/AddBook.aspx" Text="Add book"></asp:LinkButton>
+            <h2>Books</h2>
+            <asp:Repeater ID="books" runat="server">
+                <HeaderTemplate>
+                    <table>
+                </HeaderTemplate>
+                <ItemTemplate>
+                    <tr>
+                        <td>
+                            <img src='/Uploads/<%# Eval("FilePath") %>' alt="" />
+                        </td>
+                    </tr>
+                </ItemTemplate>
+                <FooterTemplate>
+                    </table>
+                </FooterTemplate>
+            </asp:Repeater>
     <% } %>
 </asp:Content>
