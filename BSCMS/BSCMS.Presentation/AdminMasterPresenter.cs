@@ -30,6 +30,8 @@ namespace BSCMS.Presentation
         {
             if (BSIdentity.Current != null && BSIdentity.Current.IsAuthenticated)
                 _adminMasterView.UserName = BSIdentity.Current.UserName;
+            else
+                _adminMasterView.UserName = "Anonymous";
         }
     }
 }

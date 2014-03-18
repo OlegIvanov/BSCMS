@@ -2,6 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
+    <h2>Sign In</h2>
     <asp:Label ID="authenticationError" runat="server" Visible="false"></asp:Label>
     <table>
         <tr>

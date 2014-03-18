@@ -56,6 +56,7 @@
   <ItemGroup>
     <Content Include="CreateDatabase.sql" />
     <Content Include="Global.asax" />
+    <Content Include="Views\Admin\AddBook.aspx" />
     <Content Include="Views\Admin\Index.aspx" />
     <Content Include="Views\Admin\SignIn.aspx" />
     <Content Include="Web.config" />
@@ -67,6 +68,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Views\Admin\AddBook.aspx.cs">
+      <DependentUpon>AddBook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\AddBook.aspx.designer.cs">
+      <DependentUpon>AddBook.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Admin\Admin.Master.cs">
       <DependentUpon>Admin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

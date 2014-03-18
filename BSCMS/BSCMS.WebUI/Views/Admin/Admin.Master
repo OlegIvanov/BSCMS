@@ -10,17 +10,17 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
+    <h1>
+        <asp:Label ID="userName" runat="server"></asp:Label>
         <% if (Request.IsAuthenticated)
            { %>
-                <asp:Label ID="userName" runat="server"></asp:Label>
                 <asp:LinkButton ID="signOut" runat="server" Text="Sign Out"></asp:LinkButton>
         <% }
            else
            { %>
                 <asp:LinkButton runat="server" PostBackUrl="~/Views/Admin/SignIn.aspx" Text="Sign In"></asp:LinkButton>
         <% } %>
-    </div>
+    </h1>
     <div>
         <asp:ContentPlaceHolder ID="main" runat="server">
         </asp:ContentPlaceHolder>
