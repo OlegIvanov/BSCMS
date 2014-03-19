@@ -9,7 +9,7 @@
             <asp:Repeater ID="books" runat="server">
                 <ItemTemplate>
                     <div>
-                        <img src="/Uploads/<%# Eval("FileName") %>" alt="" />
+                        <img src="/BookCovers/<%# Eval("FileName") %>" alt="" />
                         <div>
                             <asp:LinkButton runat="server" PostBackUrl="#"><%# Eval("Title") %></asp:LinkButton>
                         </div>

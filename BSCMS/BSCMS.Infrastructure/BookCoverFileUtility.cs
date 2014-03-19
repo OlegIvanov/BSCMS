@@ -10,7 +10,7 @@ namespace BSCMS.Infrastructure
 {
     public static class BookCoverFileUtility
     {
-        private static string _uploadDirectory = HostingEnvironment.MapPath(Path.Combine(HostingEnvironment.ApplicationPhysicalPath, "/Uploads"));
+        private static string _uploadDirectory = HostingEnvironment.MapPath(Path.Combine(HostingEnvironment.ApplicationPhysicalPath, "/BookCovers"));
 
         public static string SaveCover(HttpPostedFile bookCover)
         {
