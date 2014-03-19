@@ -2,6 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
+    <asp:LinkButton runat="server" PostBackUrl="~/Views/Admin/Index.aspx" Text="Admin Home"></asp:LinkButton>
     <h2>Add Book</h2>
     <table>
         <tr>
@@ -29,8 +30,11 @@
             </td>
         </tr>
         <tr>
-            <td colspan="2">
+            <td>
                 <asp:LinkButton ID="saveBook" runat="server" Text="Save"></asp:LinkButton>
+            </td>
+            <td>
+                <asp:LinkButton runat="server" PostBackUrl="~/Views/Admin/Index.aspx" Text="Cancel"></asp:LinkButton>
             </td>
         </tr>
     </table>
