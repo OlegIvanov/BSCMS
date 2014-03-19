@@ -33,5 +33,14 @@ namespace BSCMS.Service
                 FileName = book.FileName
             };
         }
+
+        public static EditBookViewModel ConvertToEditBookViewModel(this Book book)
+        {
+            return new EditBookViewModel 
+            { 
+                Title = book.Title,
+                Price = string.Format("{0:0.00}", book.Price)
+            };
+        }
     }
 }

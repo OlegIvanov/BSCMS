@@ -16,7 +16,7 @@
                         <span style="font-size: large; color:#990000"><%# Eval("Price") %></span>
                         <div>
                             <asp:HiddenField ID="hfBookId" runat="server" Value='<%# Eval("Id") %>' />
-                            <asp:LinkButton ID="lbEditBook" runat="server" Text="Edit"></asp:LinkButton>
+                            <a href="EditBook.aspx?BookId=<%# Eval("Id") %>" style="color:Blue">Edit</a>
                             <asp:LinkButton ID="lbDeleteBook" runat="server" Text="Delete"></asp:LinkButton>
                     </div>
                 </ItemTemplate>

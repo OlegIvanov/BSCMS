@@ -65,6 +65,24 @@ namespace BSCMS.Repository
             }
         }
 
+        public Book FindBy(int bookId)
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                SqlCommand command = new SqlCommand("GetBookById", connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.Add("@BookId", SqlDbType.Int).Value = bookId;
+
+                connection.Open();
+
+                using (IDataReader reader = command.ExecuteReader())
+                {
+                    return GetBookCollectionFromReader(reader).FirstOrDefault();
+                }
+            }
+        }
+
         private IList<Book> GetBookCollectionFromReader(IDataReader dataReader)
         {
             IList<Book> books = new List<Book>();

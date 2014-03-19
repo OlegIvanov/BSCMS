@@ -34,10 +34,9 @@ namespace BSCMS.Service
 
         public BookListResponse GetBookList()
         {
-            BookListResponse bookListResponse = new BookListResponse();
-
             IList<Book> books = _bookRepository.FindAll();
 
+            BookListResponse bookListResponse = new BookListResponse();
             bookListResponse.Books = books.ConvertToBookListViewModel();
 
             return bookListResponse;
@@ -46,6 +45,16 @@ namespace BSCMS.Service
         public void DeleteBook(DeleteBookRequest deleteBookRequest)
         {
             _bookRepository.DeleteBook(deleteBookRequest.BookId);
+        }
+
+        public EditBookDisplayResponse GetBookForEdit(EditBookDisplayRequest editBookDisplayRequest)
+        {
+            Book book = _bookRepository.FindBy(editBookDisplayRequest.BookId);
+
+            EditBookDisplayResponse editBookDisplayResponse = new EditBookDisplayResponse();
+            editBookDisplayResponse.Book = book.ConvertToEditBookViewModel();
+
+            return editBookDisplayResponse;
         }
     }
 }

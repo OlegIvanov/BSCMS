@@ -29,7 +29,7 @@ CREATE TABLE Books
 )
 
 GO
-INSERT INTO Users VALUES (1, 'oleg', 'ac29937c97d6154f8f31c85f9abf5c790557cf55')
+INSERT INTO Users VALUES (1, 'Oleg', 'ac29937c97d6154f8f31c85f9abf5c790557cf55')
 
 GO
 CREATE PROCEDURE GetUserByUserAuthenticationQuery
@@ -80,10 +80,23 @@ FROM
 GO
 CREATE PROCEDURE DeleteBook
 (
-	@BookId				INT
+	@BookId					INT
 )
 AS
 DELETE
+	Books
+WHERE
+	Books.Id = @BookId
+
+GO
+CREATE PROCEDURE GetBookById
+(
+	@BookId					INT
+)
+AS
+SELECT
+	*
+FROM
 	Books
 WHERE
 	Books.Id = @BookId

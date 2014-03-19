@@ -44,9 +44,11 @@
     <Compile Include="AddBookPresenter.cs" />
     <Compile Include="AdminIndexPresenter.cs" />
     <Compile Include="AdminMasterPresenter.cs" />
+    <Compile Include="EditBookPresenter.cs" />
     <Compile Include="IAddBookView.cs" />
     <Compile Include="IAdminIndexView.cs" />
     <Compile Include="IAdminMasterView.cs" />
+    <Compile Include="IEditBookView.cs" />
     <Compile Include="ISignInView.cs" />
     <Compile Include="Navigation\IPageNavigator.cs" />
     <Compile Include="Navigation\PageDirectory.cs" />

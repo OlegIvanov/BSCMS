@@ -57,6 +57,7 @@
     <Content Include="CreateDatabase.sql" />
     <Content Include="Global.asax" />
     <Content Include="Views\Admin\AddBook.aspx" />
+    <Content Include="Views\Admin\EditBook.aspx" />
     <Content Include="Views\Admin\Index.aspx" />
     <Content Include="Views\Admin\SignIn.aspx" />
     <Content Include="Web.config" />
@@ -87,6 +88,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Admin\EditBook.aspx.cs">
+      <DependentUpon>EditBook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\EditBook.aspx.designer.cs">
+      <DependentUpon>EditBook.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Admin\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

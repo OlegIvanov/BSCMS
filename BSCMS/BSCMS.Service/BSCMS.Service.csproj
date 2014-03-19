@@ -49,8 +49,11 @@
     <Compile Include="Messages\AuthenticateResponse.cs" />
     <Compile Include="Messages\BookListResponse.cs" />
     <Compile Include="Messages\DeleteBookRequest.cs" />
+    <Compile Include="Messages\EditBookDisplayRequest.cs" />
+    <Compile Include="Messages\EditBookDisplayResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\BookViewModel.cs" />
+    <Compile Include="ViewModels\EditBookViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BSCMS.Infrastructure\BSCMS.Infrastructure.csproj">
