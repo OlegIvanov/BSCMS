@@ -12,7 +12,7 @@
     <form id="form1" runat="server">
     <h1>
         <label>Book Store Administration:</label>
-        <asp:Label ID="lUsername" runat="server" ForeColor="DarkOrange"></asp:Label>
+        <asp:Label ID="lUsername" runat="server" ForeColor="#990000"></asp:Label>
         <% if (Request.IsAuthenticated)
            { %>
                 <asp:LinkButton ID="signOut" runat="server" Text="Sign Out"></asp:LinkButton>
