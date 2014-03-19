@@ -8,6 +8,7 @@ using BSCMS.Presentation;
 using StructureMap;
 using BSCMS.Service;
 using BSCMS.Presentation.Navigation;
+using System.Data;
 
 namespace BSCMS.WebUI.Views.Admin
 {

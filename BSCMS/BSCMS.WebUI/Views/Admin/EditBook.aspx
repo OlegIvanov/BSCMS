@@ -10,13 +10,19 @@
                     <span style="font-size:30px;">Edit Book</span>
                 </td>
             </tr>
+            <tr style="display:block; height:20px;">
+            </tr>
             <tr>
                 <td style="width:100px;">
                     <span>Title:</span>
                 </td>
                 <td>
                     <asp:TextBox ID="tbBookTitle" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="rfvBookTitle" runat="server" ControlToValidate="tbBookTitle" 
+                        Display="Static" Text="*" ForeColor="Red"></asp:RequiredFieldValidator>
                 </td>
+            </tr>
+            <tr style="display:block; height:10px;">
             </tr>
             <tr>
                 <td>
@@ -24,7 +30,13 @@
                 </td>
                 <td>
                     <asp:TextBox ID="tbBookPrice" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="rfvBookPrice" runat="server" ControlToValidate="tbBookPrice" 
+                        Display="Static" Text="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="revBookPrice" runat="server" ControlToValidate="tbBookPrice" ValidationExpression="^\d{1,2}(\.\d{1,2})"
+                        Display="Static" Text="Invalid Price Value" ForeColor="Red"></asp:RegularExpressionValidator>
                 </td>
+            </tr>
+            <tr style="display:block; height:10px;">
             </tr>
             <tr>
                 <td>
@@ -33,6 +45,8 @@
                 <td>
                     <asp:FileUpload ID="fuBookCover" runat="server" />
                 </td>
+            </tr>
+            <tr style="display:block; height:10px;">
             </tr>
             <tr>
                 <td colspan="2">

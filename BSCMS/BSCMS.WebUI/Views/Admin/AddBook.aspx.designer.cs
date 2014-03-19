@@ -22,6 +22,15 @@ namespace BSCMS.WebUI.Views.Admin {
         protected global::System.Web.UI.WebControls.TextBox tbBookTitle;
         
         /// <summary>
+        /// rfvBookTitle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvBookTitle;
+        
+        /// <summary>
         /// tbBookPrice control.
         /// </summary>
         /// <remarks>
@@ -29,6 +38,24 @@ namespace BSCMS.WebUI.Views.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbBookPrice;
+        
+        /// <summary>
+        /// rfvBookPrice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvBookPrice;
+        
+        /// <summary>
+        /// revBookPrice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revBookPrice;
         
         /// <summary>
         /// fuBookCover control.

@@ -18,7 +18,7 @@
                 <asp:Label ID="lUsername" runat="server" ForeColor="#E47911"></asp:Label>
                 <% if (Request.IsAuthenticated)
                    { %>
-                        <asp:LinkButton ID="signOut" runat="server" Text="Sign Out"></asp:LinkButton>
+                        <asp:LinkButton ID="signOut" runat="server" Text="Sign Out" CausesValidation="false"></asp:LinkButton>
                 <% }
                    else
                    { %>
