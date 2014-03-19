@@ -13,15 +13,6 @@ namespace BSCMS.WebUI.Views.Admin {
     public partial class EditBook {
         
         /// <summary>
-        /// iBookCover control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image iBookCover;
-        
-        /// <summary>
         /// tbBookTitle control.
         /// </summary>
         /// <remarks>
@@ -29,15 +20,6 @@ namespace BSCMS.WebUI.Views.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbBookTitle;
-        
-        /// <summary>
-        /// fuBookCover control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload fuBookCover;
         
         /// <summary>
         /// tbBookPrice control.
@@ -49,6 +31,15 @@ namespace BSCMS.WebUI.Views.Admin {
         protected global::System.Web.UI.WebControls.TextBox tbBookPrice;
         
         /// <summary>
+        /// fuBookCover control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload fuBookCover;
+        
+        /// <summary>
         /// lbSaveBook control.
         /// </summary>
         /// <remarks>
@@ -56,5 +47,14 @@ namespace BSCMS.WebUI.Views.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lbSaveBook;
+        
+        /// <summary>
+        /// iBookCover control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image iBookCover;
     }
 }

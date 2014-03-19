@@ -5,21 +5,25 @@
     <% if (Request.IsAuthenticated)
        { %>
             <a href="AddBook.aspx" style="color:Blue">Add Book</a>
-            <h2>Books</h2>
-            <asp:Repeater ID="rBooks" runat="server">
-                <ItemTemplate>
-                    <div>
-                        <img src="<%# Eval("CoverFilePath") %>" alt="" />
+            <div style="margin-top:50px">
+                <asp:Repeater ID="rBooks" runat="server">
+                    <ItemTemplate>
                         <div>
-                            <a href="#" style="color:Blue"><%# Eval("Title") %></a>
+                            <img src="<%# Eval("CoverFilePath") %>" alt="" />
+                            <div>
+                                <a href="#" style="color:Blue"><%# Eval("Title") %></a>
+                            </div>
+                            <div>
+                                <span style="font-size: large; color:#990000"><%# Eval("Price") %></span>
+                            </div>
+                            <div style="margin-bottom:40px;">
+                                <asp:HiddenField ID="hfBookId" runat="server" Value='<%# Eval("Id") %>' />
+                                <a href="EditBook.aspx?BookId=<%# Eval("Id") %>" style="color:Blue">Edit</a>
+                                <asp:LinkButton ID="lbDeleteBook" runat="server" Text="Delete"></asp:LinkButton>
+                            </div>
                         </div>
-                        <span style="font-size: large; color:#990000"><%# Eval("Price") %></span>
-                        <div>
-                            <asp:HiddenField ID="hfBookId" runat="server" Value='<%# Eval("Id") %>' />
-                            <a href="EditBook.aspx?BookId=<%# Eval("Id") %>" style="color:Blue">Edit</a>
-                            <asp:LinkButton ID="lbDeleteBook" runat="server" Text="Delete"></asp:LinkButton>
-                    </div>
-                </ItemTemplate>
-            </asp:Repeater>
+                    </ItemTemplate>
+                </asp:Repeater>
+            </div>
     <% } %>
 </asp:Content>

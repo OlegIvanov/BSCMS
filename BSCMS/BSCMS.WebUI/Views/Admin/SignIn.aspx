@@ -2,37 +2,17 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
-    <table>
-        <tr>
-            <td colspan="2">
-                <h2>Sign In</h2>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <asp:Label ID="authenticationError" runat="server" Visible="false" ForeColor="Red"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Username:
-            </td>
-            <td>
-                <asp:TextBox ID="userName" runat="server"></asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Password:
-            </td>
-            <td>
-                <asp:TextBox ID="userPassword" runat="server" TextMode="Password"></asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
+    <div style="margin-top:50px">
+        <span style="font-size:30px; color:#E47911;">Sign In</span>
+        <div style="margin-top:20px;">
+            <asp:Label ID="authenticationError" runat="server" Visible="false" ForeColor="Red"></asp:Label>
+            <div>Username:</div>
+            <asp:TextBox ID="userName" runat="server"></asp:TextBox>
+            <div>Password:</div>
+            <asp:TextBox ID="userPassword" runat="server" TextMode="Password"></asp:TextBox>
+            <div>
                 <asp:LinkButton ID="signIn" runat="server" Text="Sign In"></asp:LinkButton>
-            </td>
-        </tr>
-    </table>
+            </div>
+        </div>
+    </div>
 </asp:Content>

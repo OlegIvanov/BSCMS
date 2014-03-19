@@ -3,39 +3,43 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
     <a href="Index.aspx" style="color:Blue">Admin Home</a>
-    <h2>Add Book</h2>
-    <table>
-        <tr>
-            <td>
-                Title:
-            </td>
-            <td>
-                <asp:TextBox ID="tbBookTitle" runat="server"></asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Cover:
-            </td>
-            <td>
-                <asp:FileUpload ID="fuBookCover" runat="server" />
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Price:
-            </td>
-            <td>
-                <asp:TextBox ID="tbBookPrice" runat="server"></asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <asp:LinkButton ID="lbSaveBook" runat="server" Text="Save"></asp:LinkButton>
-            </td>
-            <td>
-                <a href="Index.aspx" style="color:Blue">Cancel</a>
-            </td>
-        </tr>
-    </table>
+    <div style="margin-top:50px">
+        <table cellpadding="0" cellspacing="0" width="500px">
+            <tr>
+                <td colspan="2">
+                    <span style="font-size:30px;">Add book</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:100px;">
+                    <span>Title:</span>
+                </td>
+                <td>
+                    <asp:TextBox ID="tbBookTitle" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Price:</span>
+                </td>
+                <td>
+                    <asp:TextBox ID="tbBookPrice" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Cover:</span>
+                </td>
+                <td>
+                    <asp:FileUpload ID="fuBookCover" runat="server" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <asp:LinkButton ID="lbSaveBook" runat="server" Text="Save"></asp:LinkButton>
+                    <a href="Index.aspx" style="color:Blue;">Cancel</a>
+                </td>
+            </tr>
+        </table>
+    </div>
 </asp:Content>
