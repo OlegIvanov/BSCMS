@@ -47,6 +47,7 @@ namespace BSCMS.WebUI.Views.Admin
 
         public void Display(EditBookViewModel book)
         {
+            iBookCover.ImageUrl = book.CoverFilePath;
             tbBookTitle.Text = book.Title;
             tbBookPrice.Text = book.Price;
         }

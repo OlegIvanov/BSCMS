@@ -4,6 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
     <a href="Index.aspx" style="color:Blue">Admin Home</a>
     <h2>Edit Book</h2>
+    <asp:Image ID="iBookCover" runat="server" />
     <table>
         <tr>
             <td>

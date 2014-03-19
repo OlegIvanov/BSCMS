@@ -30,7 +30,7 @@ namespace BSCMS.Service
                 Id = book.Id,
                 Title = book.Title,
                 Price = string.Format("${0:0.00}", book.Price),
-                FileName = book.FileName
+                CoverFilePath = "/BookCovers/" + book.FileName
             };
         }
 
@@ -39,7 +39,8 @@ namespace BSCMS.Service
             return new EditBookViewModel 
             { 
                 Title = book.Title,
-                Price = string.Format("{0:0.00}", book.Price)
+                Price = string.Format("{0:0.00}", book.Price),
+                CoverFilePath = "/BookCovers/" + book.FileName
             };
         }
     }
