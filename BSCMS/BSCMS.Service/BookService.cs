@@ -42,5 +42,10 @@ namespace BSCMS.Service
 
             return bookListResponse;
         }
+
+        public void DeleteBook(DeleteBookRequest deleteBookRequest)
+        {
+            _bookRepository.DeleteBook(deleteBookRequest.BookId);
+        }
     }
 }

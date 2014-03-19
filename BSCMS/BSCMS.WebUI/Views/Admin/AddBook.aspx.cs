@@ -19,10 +19,10 @@ namespace BSCMS.WebUI.Views.Admin
         {
             _presenter = new AddBookPresenter(this, ObjectFactory.GetInstance<BookService>(), ObjectFactory.GetInstance<PageNavigator>());
 
-            this.saveBook.Click += new EventHandler(saveBook_Click);
+            lbSaveBook.Click += new EventHandler(lbSaveBook_Click);
         }
 
-        protected void saveBook_Click(object sender, EventArgs e)
+        protected void lbSaveBook_Click(object sender, EventArgs e)
         {
             _presenter.SaveBook();
         }
@@ -34,12 +34,12 @@ namespace BSCMS.WebUI.Views.Admin
 
         public string Title_
         {
-            get { return this.bookTitle.Text; }
+            get { return tbBookTitle.Text; }
         }
 
         public decimal Price
         {
-            get { return decimal.Parse(this.bookPrice.Text); }
+            get { return decimal.Parse(tbBookPrice.Text); }
         }
 
         public HttpPostedFile Cover

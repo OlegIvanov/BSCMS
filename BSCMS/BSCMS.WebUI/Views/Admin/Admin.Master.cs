@@ -33,7 +33,7 @@ namespace BSCMS.WebUI.Views.Admin
 
         public string Username
         {
-            set { this.userName.Text = value; }
+            set { lUsername.Text = value; }
         }
     }
 }

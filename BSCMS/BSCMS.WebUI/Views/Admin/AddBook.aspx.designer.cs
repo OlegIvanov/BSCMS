@@ -13,39 +13,39 @@ namespace BSCMS.WebUI.Views.Admin {
     public partial class AddBook {
         
         /// <summary>
-        /// bookTitle control.
+        /// tbBookTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox bookTitle;
+        protected global::System.Web.UI.WebControls.TextBox tbBookTitle;
         
         /// <summary>
-        /// bookCover control.
+        /// fuBookCover control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload bookCover;
+        protected global::System.Web.UI.WebControls.FileUpload fuBookCover;
         
         /// <summary>
-        /// bookPrice control.
+        /// tbBookPrice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox bookPrice;
+        protected global::System.Web.UI.WebControls.TextBox tbBookPrice;
         
         /// <summary>
-        /// saveBook control.
+        /// lbSaveBook control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton saveBook;
+        protected global::System.Web.UI.WebControls.LinkButton lbSaveBook;
     }
 }

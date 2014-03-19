@@ -9,5 +9,6 @@ namespace BSCMS.Model
     {
         void SaveBook(Book book);
         IList<Book> FindAll();
+        void DeleteBook(int bookId);
     }
 }

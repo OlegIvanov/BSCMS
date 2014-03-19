@@ -4,16 +4,20 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
     <% if (Request.IsAuthenticated)
        { %>
-            <asp:LinkButton ID="addBook" runat="server" PostBackUrl="~/Views/Admin/AddBook.aspx" Text="Add book"></asp:LinkButton>
+            <a href="AddBook.aspx" style="color:Blue">Add Book</a>
             <h2>Books</h2>
-            <asp:Repeater ID="books" runat="server">
+            <asp:Repeater ID="rBooks" runat="server">
                 <ItemTemplate>
                     <div>
                         <img src="/BookCovers/<%# Eval("FileName") %>" alt="" />
                         <div>
-                            <asp:LinkButton runat="server" PostBackUrl="#"><%# Eval("Title") %></asp:LinkButton>
+                            <a href="#" style="color:Blue"><%# Eval("Title") %></a>
                         </div>
                         <span style="font-size: large; color:#990000"><%# Eval("Price") %></span>
+                        <div>
+                            <asp:HiddenField ID="hfBookId" runat="server" Value='<%# Eval("Id") %>' />
+                            <asp:LinkButton ID="lbEditBook" runat="server" Text="Edit"></asp:LinkButton>
+                            <asp:LinkButton ID="lbDeleteBook" runat="server" Text="Delete"></asp:LinkButton>
                     </div>
                 </ItemTemplate>
             </asp:Repeater>

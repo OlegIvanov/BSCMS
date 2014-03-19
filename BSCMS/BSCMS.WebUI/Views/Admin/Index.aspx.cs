@@ -23,12 +23,31 @@ namespace BSCMS.WebUI.Views.Admin
         protected void Page_Load(object sender, EventArgs e)
         {
             _presenter.Display();
+
+            foreach (RepeaterItem repeaterItem in rBooks.Items)
+            {
+                LinkButton lbDeleteBook = repeaterItem.FindControl("lbDeleteBook") as LinkButton;
+                lbDeleteBook.Click += new EventHandler(lbDeleteBook_Click);
+            }
+        }
+
+        protected void lbDeleteBook_Click(object sender, EventArgs e)
+        {
+            LinkButton lbDeleteBook = sender as LinkButton;
+            HiddenField hfBookId = lbDeleteBook.Parent.FindControl("hfBookId") as HiddenField;
+
+            BookId = int.Parse(hfBookId.Value);
+
+            _presenter.DeleteBook();
+            _presenter.Display();
         }
 
         public void Display(IList<BookViewModel> books)
         {
-            this.books.DataSource = books;
-            this.books.DataBind();
+            rBooks.DataSource = books;
+            rBooks.DataBind();
         }
+
+        public int BookId { get; set; }
     }
 }

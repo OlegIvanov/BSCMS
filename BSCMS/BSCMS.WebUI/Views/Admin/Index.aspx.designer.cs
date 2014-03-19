@@ -13,21 +13,12 @@ namespace BSCMS.WebUI.Views.Admin {
     public partial class Index {
         
         /// <summary>
-        /// addBook control.
+        /// rBooks control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton addBook;
-        
-        /// <summary>
-        /// books control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater books;
+        protected global::System.Web.UI.WebControls.Repeater rBooks;
     }
 }

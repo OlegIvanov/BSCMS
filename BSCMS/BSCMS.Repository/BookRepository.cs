@@ -50,6 +50,21 @@ namespace BSCMS.Repository
             }
         }
 
+        public void DeleteBook(int bookId)
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                SqlCommand command = new SqlCommand("DeleteBook", connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.Add("@BookId", SqlDbType.Int).Value = bookId;
+
+                connection.Open();
+
+                command.ExecuteNonQuery();
+            }
+        }
+
         private IList<Book> GetBookCollectionFromReader(IDataReader dataReader)
         {
             IList<Book> books = new List<Book>();

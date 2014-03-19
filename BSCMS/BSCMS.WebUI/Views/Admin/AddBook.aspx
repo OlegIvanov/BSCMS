@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
-    <asp:LinkButton runat="server" PostBackUrl="~/Views/Admin/Index.aspx" Text="Admin Home"></asp:LinkButton>
+    <a href="Index.aspx" style="color:Blue">Admin Home</a>
     <h2>Add Book</h2>
     <table>
         <tr>
@@ -10,7 +10,7 @@
                 Title:
             </td>
             <td>
-                <asp:TextBox ID="bookTitle" runat="server"></asp:TextBox>
+                <asp:TextBox ID="tbBookTitle" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -18,7 +18,7 @@
                 Cover:
             </td>
             <td>
-                <asp:FileUpload ID="bookCover" runat="server" />
+                <asp:FileUpload ID="fuBookCover" runat="server" />
             </td>
         </tr>
         <tr>
@@ -26,15 +26,15 @@
                 Price:
             </td>
             <td>
-                <asp:TextBox ID="bookPrice" runat="server"></asp:TextBox>
+                <asp:TextBox ID="tbBookPrice" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr>
             <td>
-                <asp:LinkButton ID="saveBook" runat="server" Text="Save"></asp:LinkButton>
+                <asp:LinkButton ID="lbSaveBook" runat="server" Text="Save"></asp:LinkButton>
             </td>
             <td>
-                <asp:LinkButton runat="server" PostBackUrl="~/Views/Admin/Index.aspx" Text="Cancel"></asp:LinkButton>
+                <a href="Index.aspx" style="color:Blue">Cancel</a>
             </td>
         </tr>
     </table>

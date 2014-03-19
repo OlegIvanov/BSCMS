@@ -76,3 +76,14 @@ SELECT
 	* 
 FROM 
 	Books
+
+GO
+CREATE PROCEDURE DeleteBook
+(
+	@BookId				INT
+)
+AS
+DELETE
+	Books
+WHERE
+	Books.Id = @BookId

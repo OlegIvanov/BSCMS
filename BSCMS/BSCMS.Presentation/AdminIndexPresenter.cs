@@ -24,5 +24,13 @@ namespace BSCMS.Presentation
 
             _adminIndexView.Display(bookListResponse.Books);
         }
+
+        public void DeleteBook()
+        {
+            DeleteBookRequest deleteBookRequest = new DeleteBookRequest();
+            deleteBookRequest.BookId = _adminIndexView.BookId;
+
+            _bookService.DeleteBook(deleteBookRequest);
+        }
     }
 }
