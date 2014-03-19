@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using BSCMS.Presentation;
 using StructureMap;
 using BSCMS.Service;
+using BSCMS.Presentation.Navigation;
 
 namespace BSCMS.WebUI.Views.Admin
 {
@@ -16,7 +17,7 @@ namespace BSCMS.WebUI.Views.Admin
 
         protected void Page_Init(object sender, EventArgs e)
         {
-            _presenter = new AddBookPresenter(this, ObjectFactory.GetInstance<BookService>());
+            _presenter = new AddBookPresenter(this, ObjectFactory.GetInstance<BookService>(), ObjectFactory.GetInstance<PageNavigator>());
 
             this.saveBook.Click += new EventHandler(saveBook_Click);
         }

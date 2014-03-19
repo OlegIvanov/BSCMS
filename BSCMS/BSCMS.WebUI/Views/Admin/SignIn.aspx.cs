@@ -13,7 +13,8 @@ namespace BSCMS.WebUI.Views.Admin
 
         protected void Page_Init(object sender, EventArgs e)
         {
-            _presenter = new SignInPresenter(this, ObjectFactory.GetInstance<AuthenticationService>(), new AspFormsAuthentication(), new PageNavigator());
+            _presenter = new SignInPresenter(this, ObjectFactory.GetInstance<AuthenticationService>(), ObjectFactory.GetInstance<AspFormsAuthentication>(), 
+                                                ObjectFactory.GetInstance<PageNavigator>());
 
             this.signIn.Click += new EventHandler(signIn_Click);
         }
