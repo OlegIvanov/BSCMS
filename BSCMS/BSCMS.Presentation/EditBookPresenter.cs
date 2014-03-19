@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using BSCMS.Service;
 using BSCMS.Service.Messages;
+using BSCMS.Presentation.Navigation;
 
 namespace BSCMS.Presentation
 {
@@ -11,11 +12,13 @@ namespace BSCMS.Presentation
     {
         private IEditBookView _editBookView;
         private BookService _bookService;
+        private IPageNavigator _pageNavigator;
 
-        public EditBookPresenter(IEditBookView editBookView, BookService bookService)
+        public EditBookPresenter(IEditBookView editBookView, BookService bookService, IPageNavigator pageNavigator)
         {
             _editBookView = editBookView;
             _bookService = bookService;
+            _pageNavigator = pageNavigator;
         }
 
         public void Display()
@@ -26,6 +29,21 @@ namespace BSCMS.Presentation
             EditBookDisplayResponse editBookDisplayResponse = _bookService.GetBookForEdit(editBookDisplayRequest);
 
             _editBookView.Display(editBookDisplayResponse.Book);
+        }
+
+        public void EditBook()
+        {
+            EditBookRequest editBookRequest = new EditBookRequest 
+            { 
+                Id = _editBookView.Id,
+                Title = _editBookView.Title_,
+                Price = _editBookView.Price,
+                Cover = _editBookView.Cover
+            };
+
+            _bookService.EditBook(editBookRequest);
+
+            _pageNavigator.NavigateTo(PageDirectory.AdminHome);
         }
     }
 }

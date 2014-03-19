@@ -7,9 +7,10 @@ namespace BSCMS.Model
 {
     public interface IBookRepository
     {
-        void SaveBook(Book book);
+        void Save(Book book);
         IList<Book> FindAll();
-        void DeleteBook(int bookId);
+        void Delete(int bookId);
         Book FindBy(int bookId);
+        void Update(Book book);
     }
 }

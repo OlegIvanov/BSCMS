@@ -17,7 +17,7 @@ namespace BSCMS.Repository
             _connectionString = connectionString;
         }
 
-        public void SaveBook(Book book)
+        public void Save(Book book)
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
@@ -50,7 +50,7 @@ namespace BSCMS.Repository
             }
         }
 
-        public void DeleteBook(int bookId)
+        public void Delete(int bookId)
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
@@ -58,6 +58,24 @@ namespace BSCMS.Repository
                 command.CommandType = CommandType.StoredProcedure;
 
                 command.Parameters.Add("@BookId", SqlDbType.Int).Value = bookId;
+
+                connection.Open();
+
+                command.ExecuteNonQuery();
+            }
+        }
+
+        public void Update(Book book)
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                SqlCommand command = new SqlCommand("UpdateBook", connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.Add("@BookId", SqlDbType.Int).Value = book.Id;
+                command.Parameters.Add("@Title", SqlDbType.NVarChar, 200).Value = book.Title;
+                command.Parameters.Add("@Price", SqlDbType.Money).Value = book.Price;
+                command.Parameters.Add("@FileName", SqlDbType.NVarChar, 100).Value = book.FileName;
 
                 connection.Open();
 

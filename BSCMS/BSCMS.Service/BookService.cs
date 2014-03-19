@@ -20,16 +20,16 @@ namespace BSCMS.Service
 
         public void AddBook(AddBookRequest addBookRequest)
         {
-            string fileName = BookCoverFileUtility.SaveCover(addBookRequest.Cover);
+            string coverFileName = BookCoverFileUtility.SaveCover(addBookRequest.Cover);
 
             Book book = new Book
             {
                 Title = addBookRequest.Title,
                 Price = addBookRequest.Price,
-                FileName = fileName
+                FileName = coverFileName
             };
 
-            _bookRepository.SaveBook(book);
+            _bookRepository.Save(book);
         }
 
         public BookListResponse GetBookList()
@@ -44,7 +44,7 @@ namespace BSCMS.Service
 
         public void DeleteBook(DeleteBookRequest deleteBookRequest)
         {
-            _bookRepository.DeleteBook(deleteBookRequest.BookId);
+            _bookRepository.Delete(deleteBookRequest.BookId);
         }
 
         public EditBookDisplayResponse GetBookForEdit(EditBookDisplayRequest editBookDisplayRequest)
@@ -55,6 +55,23 @@ namespace BSCMS.Service
             editBookDisplayResponse.Book = book.ConvertToEditBookViewModel();
 
             return editBookDisplayResponse;
+        }
+
+        public void EditBook(EditBookRequest editBookRequest)
+        {
+            Book book = _bookRepository.FindBy(editBookRequest.Id);
+
+            if (editBookRequest.Cover.ContentLength != 0)
+            {
+                BookCoverFileUtility.DeleteCover(book.FileName);
+
+                book.FileName = BookCoverFileUtility.SaveCover(editBookRequest.Cover);
+            }
+
+            book.Title = editBookRequest.Title;
+            book.Price = editBookRequest.Price;
+
+            _bookRepository.Update(book);
         }
     }
 }

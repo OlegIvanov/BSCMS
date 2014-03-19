@@ -15,12 +15,17 @@ namespace BSCMS.Infrastructure
         public static string SaveCover(HttpPostedFile bookCover)
         {
             Directory.CreateDirectory(_uploadDirectory);
-            string fileName = Guid.NewGuid().ToString() + Path.GetExtension(bookCover.FileName);
+            string coverFileName = Guid.NewGuid().ToString() + Path.GetExtension(bookCover.FileName);
             
-            string filePath = Path.Combine(_uploadDirectory, fileName);
+            string filePath = Path.Combine(_uploadDirectory, coverFileName);
             bookCover.SaveAs(filePath);
             
-            return fileName;
+            return coverFileName;
+        }
+
+        public static void DeleteCover(string coverFileName)
+        {
+            File.Delete(Path.Combine(_uploadDirectory, coverFileName));
         }
     }
 }

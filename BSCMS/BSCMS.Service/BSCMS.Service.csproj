@@ -51,6 +51,7 @@
     <Compile Include="Messages\DeleteBookRequest.cs" />
     <Compile Include="Messages\EditBookDisplayRequest.cs" />
     <Compile Include="Messages\EditBookDisplayResponse.cs" />
+    <Compile Include="Messages\EditBookRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\BookViewModel.cs" />
     <Compile Include="ViewModels\EditBookViewModel.cs" />

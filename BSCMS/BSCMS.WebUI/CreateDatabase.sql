@@ -100,3 +100,21 @@ FROM
 	Books
 WHERE
 	Books.Id = @BookId
+
+GO
+CREATE PROCEDURE UpdateBook
+(
+	@BookId					INT,
+	@Title					NVARCHAR(200),
+	@Price					MONEY,
+	@FileName				NVARCHAR(100)
+)
+AS
+UPDATE
+	Books
+SET
+	Books.Title = @Title,
+	Books.Price = @Price,
+	Books.FileName = @FileName
+WHERE
+	Books.Id = @BookId
