@@ -44,6 +44,10 @@ namespace BSCMS.Service
 
         public void DeleteBook(DeleteBookRequest deleteBookRequest)
         {
+            Book book = _bookRepository.FindBy(deleteBookRequest.BookId);
+
+            BookCoverFileUtility.DeleteCover(book.FileName);
+
             _bookRepository.Delete(deleteBookRequest.BookId);
         }
 
