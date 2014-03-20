@@ -54,6 +54,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\BookStore.mdf" />
+    <Content Include="App_Data\BookStore_log.ldf">
+      <DependentUpon>BookStore.mdf</DependentUpon>
+    </Content>
     <Content Include="CreateDatabase.sql" />
     <Content Include="Global.asax" />
     <Content Include="Views\Admin\AddBook.aspx" />
