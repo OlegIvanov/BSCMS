@@ -18,17 +18,18 @@ namespace BSCMS.WebUI.Views.Admin
         protected void Page_Init(object sender, EventArgs e)
         {
             _presenter = new AdminIndexPresenter(this, ObjectFactory.GetInstance<BookService>());
-        }
-
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            _presenter.Display();
 
             foreach (RepeaterItem repeaterItem in rBooks.Items)
             {
                 LinkButton lbDeleteBook = repeaterItem.FindControl("lbDeleteBook") as LinkButton;
                 lbDeleteBook.Click += new EventHandler(lbDeleteBook_Click);
             }
+        }
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!Page.IsPostBack)
+                _presenter.Display();
         }
 
         protected void lbDeleteBook_Click(object sender, EventArgs e)
