@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
     <a href="<%: GetRouteUrl("Admin_AddBook", new object { }) %>" style="color:Blue">AddBook</a>
-    <div style="margin-top:50px">
+    <div style="margin-top:50px;">
         <asp:Repeater ID="rBooks" runat="server">
             <ItemTemplate>
                 <div>

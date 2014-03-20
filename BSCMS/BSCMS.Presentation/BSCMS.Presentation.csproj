@@ -49,12 +49,14 @@
     <Compile Include="IAdminIndexView.cs" />
     <Compile Include="IAdminMasterView.cs" />
     <Compile Include="IEditBookView.cs" />
+    <Compile Include="IHomeIndexView.cs" />
     <Compile Include="ISignInView.cs" />
     <Compile Include="Navigation\IPageNavigator.cs" />
     <Compile Include="Navigation\PageDirectory.cs" />
     <Compile Include="Navigation\PageNavigator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SignInPresenter.cs" />
+    <Compile Include="HomeIndexPresenter.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BSCMS.Infrastructure\BSCMS.Infrastructure.csproj">

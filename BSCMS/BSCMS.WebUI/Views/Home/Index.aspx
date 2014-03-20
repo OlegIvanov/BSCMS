@@ -8,9 +8,27 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-    
-    </div>
+        <div style="width:960px; margin:auto; font-size:30px;">
+            <div style="width:50%; float:left;">
+                Book Store
+            </div>
+            <div style="width:100%; margin-top:50px; float:left; font-size:20px;">
+                <asp:Repeater ID="rBooks" runat="server">
+                    <ItemTemplate>
+                        <div style="margin-bottom:40px;">
+                            <img src="<%# Eval("CoverFilePath") %>" alt="" />
+                            <div>
+                                <a href="#" style="color:Blue"><%# Eval("Title") %></a>
+                            </div>
+                            <div>
+                                <span style="font-size: large; color:#990000"><%# Eval("Price") %></span>
+                            </div>
+                            <asp:HiddenField ID="hfBookId" runat="server" Value='<%# Eval("Id") %>' />
+                        </div>
+                    </ItemTemplate>
+                </asp:Repeater>
+            </div>
+        </div>    
     </form>
 </body>
 </html>
