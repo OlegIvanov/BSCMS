@@ -8,5 +8,10 @@ namespace BSCMS.Infrastructure.Configuration
         {
             get { return WebConfigurationManager.AppSettings["BookCoversFolderName"]; }
         }
+
+        public string PasswordSalt
+        {
+            get { return WebConfigurationManager.AppSettings["PasswordSalt"]; }
+        }
     }
 }

@@ -3,5 +3,6 @@
     public interface IApplicationSettings
     {
         string BookCoversFolderName { get; }
+        string PasswordSalt { get; }
     }
 }

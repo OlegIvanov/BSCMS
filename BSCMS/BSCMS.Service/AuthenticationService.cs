@@ -1,4 +1,4 @@
-﻿using BSCMS.Infrastructure;
+﻿using BSCMS.Authentication.Infrastructure;
 using BSCMS.Model;
 using BSCMS.Service.Messages;
 

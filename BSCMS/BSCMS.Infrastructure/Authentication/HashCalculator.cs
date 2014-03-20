@@ -1,14 +1,15 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
+using BSCMS.Infrastructure.Configuration;
 
-namespace BSCMS.Infrastructure
+namespace BSCMS.Authentication.Infrastructure
 {
     public static class HashCalculator
     {
         public static string HashPassword(string password)
         {
             // Add salt to password
-            password += "PasswordSalt";
+            password += ApplicationSettingsFactory.GetApplicationSettings().PasswordSalt;
 
             // Convert password to bytes
             byte[] passwordBytes = Encoding.UTF8.GetBytes(password);
