@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
-    <a href="Index.aspx" style="color:Blue">Admin Home</a>
+    <a href='<%: GetRouteUrl("Admin_Home", new { }) %>' style="color:Blue">Admin Home</a>
     <div style="margin-top:50px">
         <table cellpadding="0" cellspacing="0" width="500px">
             <tr>
