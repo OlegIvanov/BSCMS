@@ -46,6 +46,9 @@
     <Compile Include="Authentication\BSPrincipal.cs" />
     <Compile Include="Authentication\IFormsAuthentication.cs" />
     <Compile Include="BookCoverFileUtility.cs" />
+    <Compile Include="Configuration\ApplicationSettingsFactory.cs" />
+    <Compile Include="Configuration\IApplicationSettings.cs" />
+    <Compile Include="Configuration\WebConfigApplicationSettings.cs" />
     <Compile Include="HashCalculator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

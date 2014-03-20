@@ -4,6 +4,8 @@ using System.Web;
 using System.Web.Routing;
 using System.Web.Security;
 using BSCMS.Infrastructure.Authentication;
+using BSCMS.Infrastructure.Configuration;
+using StructureMap;
 
 namespace BSCMS.WebUI
 {
@@ -24,6 +26,8 @@ namespace BSCMS.WebUI
             RegisterRoutes(RouteTable.Routes);
 
             ContainerBootstrapper.BootstrapStructureMap();
+
+            ApplicationSettingsFactory.InitializeApplicationSettingsFactory(ObjectFactory.GetInstance<IApplicationSettings>());
         }
 
         protected void Session_Start(object sender, EventArgs e)

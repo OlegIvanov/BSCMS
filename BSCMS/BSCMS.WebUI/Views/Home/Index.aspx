@@ -16,7 +16,7 @@
                 <asp:Repeater ID="rBooks" runat="server">
                     <ItemTemplate>
                         <div style="margin-bottom:40px;">
-                            <img src="<%# Eval("CoverFilePath") %>" alt="" />
+                            <img src="<%# Eval("CoverImageUrl") %>" alt="" />
                             <div>
                                 <a href="#" style="color:Blue"><%# Eval("Title") %></a>
                             </div>
