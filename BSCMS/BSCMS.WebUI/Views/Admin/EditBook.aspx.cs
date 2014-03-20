@@ -36,7 +36,7 @@ namespace BSCMS.WebUI.Views.Admin
 
         public int Id
         {
-            get { return int.Parse(Request.Params["BookId"]); }
+            get { return Convert.ToInt32(RouteData.Values["BookId"]); }
         }
 
         public string Title_

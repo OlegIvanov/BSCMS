@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using BSCMS.Infrastructure.Authentication;
 using BSCMS.Presentation;
 using BSCMS.Presentation.Navigation;
+using StructureMap;
 
 namespace BSCMS.WebUI.Views.Admin
 {
@@ -16,8 +17,8 @@ namespace BSCMS.WebUI.Views.Admin
 
         protected void Page_Init(object sender, EventArgs e)
         {
-            _presenter = new AdminMasterPresenter(this, new AspFormsAuthentication(), new PageNavigator());
-
+            _presenter = new AdminMasterPresenter(this, ObjectFactory.GetInstance<AspFormsAuthentication>(), ObjectFactory.GetInstance<PageNavigator>());
+          
             this.signOut.Click += new EventHandler(signOut_Click);
         }
 

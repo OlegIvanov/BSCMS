@@ -21,8 +21,8 @@
                         <asp:LinkButton ID="signOut" runat="server" Text="Sign Out" CausesValidation="false"></asp:LinkButton>
                 <% }
                    else
-                   { %>
-                        <asp:LinkButton runat="server" PostBackUrl="~/Views/Admin/SignIn.aspx" Text="Sign In"></asp:LinkButton>
+                   { %> 
+                        <a href='<%: GetRouteUrl("Admin_SignIn", new { }) %>' style="color:Blue;">Sign In</a>
                 <% } %>
             </div>
             <div style="width:100%; float:left; font-size:20px;">

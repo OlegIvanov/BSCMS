@@ -51,7 +51,7 @@
             <tr>
                 <td colspan="2">
                     <asp:LinkButton ID="lbSaveBook" runat="server" Text="Save"></asp:LinkButton>
-                    <a href="Index.aspx" style="color:Blue;">Cancel</a>
+                    <a href='<%: GetRouteUrl("Admin_Home", new { }) %>' style="color:Blue">Cancel</a>
                 </td>
             </tr>
         </table>

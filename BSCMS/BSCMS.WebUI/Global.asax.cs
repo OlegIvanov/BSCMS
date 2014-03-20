@@ -6,13 +6,26 @@ using System.Web.Security;
 using System.Web.SessionState;
 using BSCMS.Infrastructure.Authentication;
 using System.Threading;
+using System.Web.Routing;
 
 namespace BSCMS.WebUI
 {
     public class Global : System.Web.HttpApplication
     {
+        public static void RegisterRoutes(RouteCollection routes)
+        {
+            routes.MapPageRoute("Admin_Home", "Admin", "~/Views/Admin/Index.aspx");
+            routes.MapPageRoute("Admin_SignIn", "Admin/SignIn", "~/Views/Admin/SignIn.aspx");
+            routes.MapPageRoute("Admin_AddBook", "Admin/AddBook", "~/Views/Admin/AddBook.aspx");
+            routes.MapPageRoute("Admin_EditBook", "Admin/EditBook/{BookId}", "~/Views/Admin/EditBook.aspx");
+
+            routes.MapPageRoute("User_Home", "", "~/Views/Home/Index.aspx");
+        }
+
         protected void Application_Start(object sender, EventArgs e)
         {
+            RegisterRoutes(RouteTable.Routes);
+
             ContainerBootstrapper.BootstrapStructureMap();
         }
 

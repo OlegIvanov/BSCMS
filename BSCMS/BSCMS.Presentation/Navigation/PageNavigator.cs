@@ -23,7 +23,7 @@ namespace BSCMS.Presentation.Navigation
                     }
                 case PageDirectory.AdminHome:
                     {
-                        HttpContext.Current.Response.Redirect("~/Views/Admin/Index.aspx");
+                        HttpContext.Current.Response.RedirectToRoute("Admin_Home");
                         break;
                     }
             }
