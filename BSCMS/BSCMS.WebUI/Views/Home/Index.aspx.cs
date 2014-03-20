@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using BSCMS.Presentation;
-using StructureMap;
 using BSCMS.Service;
 using BSCMS.Service.ViewModels;
+using StructureMap;
 
 namespace BSCMS.WebUI.Views.Home
 {
