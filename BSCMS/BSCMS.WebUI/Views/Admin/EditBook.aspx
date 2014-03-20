@@ -32,8 +32,8 @@
                     <asp:TextBox ID="tbBookPrice" runat="server"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="rfvBookPrice" runat="server" ControlToValidate="tbBookPrice" 
                         Display="Static" Text="*" ForeColor="Red"></asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator ID="revBookPrice" runat="server" ControlToValidate="tbBookPrice" ValidationExpression="^\d{1,2}(\.\d{1,2})"
-                        Display="Static" Text="Invalid Price Value" ForeColor="Red"></asp:RegularExpressionValidator>
+                    <asp:RangeValidator ID="rvBookPrice" runat="server" ControlToValidate="tbBookPrice" Type="Currency" MinimumValue="0" MaximumValue="999999999.99"
+                        Display="Static" Text="Invalid Price Value" ForeColor="Red"></asp:RangeValidator>
                 </td>
             </tr>
             <tr style="display:block; height:10px;">
