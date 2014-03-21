@@ -36,7 +36,7 @@ namespace BSCMS.Service
             { 
                 Title = book.Title,
                 Price = string.Format("{0:0.00}", book.Price),
-                CoverFilePath = string.Format("/{0}/{1}", ApplicationSettingsFactory.GetApplicationSettings().BookCoversFolderName, book.FileName)
+                CoverImageUrl = string.Format("/{0}/{1}", ApplicationSettingsFactory.GetApplicationSettings().BookCoversFolderName, book.FileName)
             };
         }
     }
