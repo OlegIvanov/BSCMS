@@ -2,6 +2,6 @@
 {
     public interface IUserRepository
     {
-        User FindBy(UserAuthenticationQuery userAuthenticationQuery);
+        User FindBy(string username, string passwordHash);
     }
 }

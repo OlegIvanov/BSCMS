@@ -32,7 +32,7 @@ GO
 INSERT INTO Users VALUES (1, 'Oleg', 'ac29937c97d6154f8f31c85f9abf5c790557cf55')
 
 GO
-CREATE PROCEDURE GetUserByUserAuthenticationQuery
+CREATE PROCEDURE GetUserByUsernameAndPasswordHash
 (
 	@Username				NVARCHAR(100),
 	@PasswordHash			NVARCHAR(100)

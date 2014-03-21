@@ -15,15 +15,15 @@ namespace BSCMS.Repository
             _connectionString = connectionString;
         }
 
-        public User FindBy(UserAuthenticationQuery userAuthenticationQuery)
+        public User FindBy(string username, string passwordHash)
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                SqlCommand command = new SqlCommand("GetUserByUserAuthenticationQuery", connection);
+                SqlCommand command = new SqlCommand("GetUserByUsernameAndPasswordHash", connection);
                 command.CommandType = CommandType.StoredProcedure;
 
-                command.Parameters.Add("@Username", SqlDbType.NVarChar, 100).Value = userAuthenticationQuery.Username;
-                command.Parameters.Add("@PasswordHash", SqlDbType.NVarChar, 100).Value = userAuthenticationQuery.PasswordHash;
+                command.Parameters.Add("@Username", SqlDbType.NVarChar, 100).Value = username;
+                command.Parameters.Add("@PasswordHash", SqlDbType.NVarChar, 100).Value = passwordHash;
 
                 connection.Open();
 

@@ -15,13 +15,7 @@ namespace BSCMS.Service
 
         public AuthenticateResponse SignIn(AuthenticateRequest authenticateRequest)
         {
-            UserAuthenticationQuery userAuthenticationQuery = new UserAuthenticationQuery 
-            { 
-                Username = authenticateRequest.Username,
-                PasswordHash = HashCalculator.HashPassword(authenticateRequest.Password)
-            };
-
-            User user = _userRepository.FindBy(userAuthenticationQuery);
+            User user = _userRepository.FindBy(authenticateRequest.Username, HashCalculator.HashPassword(authenticateRequest.Password));
 
             AuthenticateResponse authenticateResponse = new AuthenticateResponse();
             authenticateResponse.IsAuthenticated = false;
