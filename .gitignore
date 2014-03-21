@@ -151,4 +151,4 @@ $RECYCLE.BIN/
 .DS_Store
 
 # Folder with uploaded book covers
-BookCovers/
+#BookCovers/
